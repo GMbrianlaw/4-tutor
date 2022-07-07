@@ -1,0 +1,7 @@
+{
+
+    "files.exclude": {"**/__pycache__/": true, "dist/": true, "node_modules/": true, "venv/": true},
+
+    "python.analysis.typeCheckingMode": "strict"
+
+}
