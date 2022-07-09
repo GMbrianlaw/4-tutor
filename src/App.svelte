@@ -1,21 +1,30 @@
 <script lang="ts">
 
-    let count: number = 0;
+    import { Route } from 'tinro';
 
-    function increase(): void {
-
-        ++count;
-
-    }
+    import About from '$pages/About.svelte';
+    import Home from '$pages/Home.svelte';
 
 </script>
 
-<svelte:head>
+<nav>
 
-    <title>4 Tutor | Home</title>
+    <a href="/home">Home</a>
 
-</svelte:head>
+    <a href="/about">About</a>
 
-<h1>{count} click{count !== 1 ? 's' : ''}.</h1>
+</nav>
 
-<button on:click="{increase}">Increase</button>
+<Route path="/" redirect="/home"/>
+
+<Route path="/about">
+
+    <About/>
+
+</Route>
+
+<Route path="/home">
+
+    <Home/>
+
+</Route>
