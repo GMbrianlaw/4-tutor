@@ -28,6 +28,8 @@ export default defineConfig(
             )
         ],
         preview: { port: 3000 }, resolve: { alias: { '$pages': join(__dirname, 'src', 'pages') } },
-        server: { proxy: { '/api': { secure: false, target: 'http://127.0.0.1:5000' } } }
+        server: {
+            proxy: { '/api': { secure: false, target: 'http://127.0.0.1:5000' } }, strictPort: true
+        }
     }
 );
