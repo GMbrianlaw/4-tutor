@@ -1,9 +1,19 @@
 <script lang="ts">
 
     import { Route } from 'tinro';
+    import { router } from 'tinro';
 
     import About from '$pages/About.svelte';
     import Home from '$pages/Home.svelte';
+    import NotFound_ from '$pages/404.svelte';
+
+    const redirectRoute: string | undefined = router.location.query.get(
+        'route'
+    ) as string | undefined;
+
+    if (redirectRoute !== undefined) {
+        router.goto(decodeURIComponent(redirectRoute));
+    }
 
 </script>
 
@@ -14,6 +24,12 @@
     <a href="/about">About</a>
 
 </nav>
+
+<Route fallback>
+
+    <NotFound_/>
+
+</Route>
 
 <Route path="/" redirect="/home"/>
 
