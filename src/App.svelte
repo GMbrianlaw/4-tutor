@@ -5,6 +5,7 @@
 
     import About from '$pages/About.svelte';
     import Home from '$pages/Home.svelte';
+    import Navbar from '$components/Navbar.svelte';
     import NotFound_ from '$pages/404.svelte';
 
     const redirectRoute: string | undefined = router.location.query.get(
@@ -17,30 +18,30 @@
 
 </script>
 
-<nav>
+<Navbar/>
 
-    <a href="/home">Home</a>
+<main>
 
-    <a href="/about">About</a>
+    <Route fallback>
+        <NotFound_/>
+    </Route>
 
-</nav>
+    <Route path="/" redirect="/home"/>
 
-<Route fallback>
+    <Route path="/about">
+        <About/>
+    </Route>
 
-    <NotFound_/>
+    <Route path="/home">
+        <Home/>
+    </Route>
 
-</Route>
+</main>
 
-<Route path="/" redirect="/home"/>
+<style>
 
-<Route path="/about">
+    main {
+        margin: 14px 2vw 0 2vw;
+    }
 
-    <About/>
-
-</Route>
-
-<Route path="/home">
-
-    <Home/>
-
-</Route>
+</style>

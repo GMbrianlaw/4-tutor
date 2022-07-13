@@ -3,8 +3,9 @@
     "compilerOptions": {
         "baseUrl": ".", "esModuleInterop": true, "importsNotUsedAsValues": "error",
         "isolatedModules": true, "module": "ESNext", "moduleResolution": "node",
-        "paths": {"$pages/*": ["src/pages/*"]}, "preserveValueImports": true, "skipLibCheck": true,
-        "strict": true, "target": "ES2017", "useDefineForClassFields": true
+        "paths": {"$components/*": ["src/components/*"], "$pages/*": ["src/pages/*"]},
+        "preserveValueImports": true, "skipLibCheck": true, "strict": true, "target": "ES2017",
+        "useDefineForClassFields": true
     },
 
     "include": ["src/**/*.svelte", "src/**/*.ts", "vite.config.ts"]

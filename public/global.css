@@ -1,0 +1,41 @@
+* {
+
+    border: none;
+
+    color: var(--color-primary);
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+a {
+
+    text-decoration: none;
+
+}
+
+body {
+
+    background-color: var(--color-base);
+
+    font-family: 'Ubuntu', sans-serif;
+
+    height: 100vh;
+
+    line-height: 1;
+
+    margin: 0 18vh;
+
+}
+
+html {
+
+    --color-base: #051622;
+    --color-primary: #deb992;
+    --color-secondary: #1ba098;
+
+    font-size: 16px;
+
+}

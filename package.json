@@ -2,7 +2,7 @@
 
     "devDependencies": {
         "@sveltejs/vite-plugin-svelte": "1.0.0-next.49", "@types/node": "18.0.3",
-        "esbuild": "0.14.48", "svelte": "3.48.0", "tinro": "0.6.12", "vite": "2.9.13"
+        "esbuild": "0.14.49", "svelte": "3.49.0", "tinro": "0.6.12", "vite": "2.9.14"
     },
 
     "name": "4-tutor",

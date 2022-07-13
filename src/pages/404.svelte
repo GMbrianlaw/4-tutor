@@ -1,1 +1,7 @@
-<h1>404 Not Found</h1>
+<svelte:head>
+
+    <title>404 Not Found</title>
+
+</svelte:head>
+
+<h3>404 Not Found</h3>

@@ -4,12 +4,4 @@
 
 </svelte:head>
 
-<h1>About</h1>
-
-<style>
-
-    h1 {
-        color: purple;
-    }
-
-</style>
+<h3>About</h3>
